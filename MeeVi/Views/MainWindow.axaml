@@ -8,29 +8,74 @@
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
         Title="MeeVi"
-        MaxWidth="800"
+        MinHeight="450"
         MinWidth="800"
-        MaxHeight="450"
-        MinHeight="450">
+        CanMinimize="False">
 
     <Design.DataContext>
-        <!-- This only sets the DataContext for the previewer in an IDE,
-             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
         <vm:MainWindowViewModel/>
     </Design.DataContext>
-    <StackPanel>
-        <Grid IsVisible="True"
-              Background="Gray">
 
-		    <TextBlock Text="{Binding Greeting}" 
-                 HorizontalAlignment="Center" 
-                 VerticalAlignment="Center" 
-                 FontSize="15"/>	
-        </Grid>
-
-        <Grid VerticalAlignment="Bottom">
-			
-        </Grid>
+    <DockPanel>
         
-    </StackPanel>
+            <Grid 
+                  Background="Gray"
+                  DockPanel.Dock="Top"
+                  Height="20">
+                <Menu>
+                <MenuItem Header="Файл"
+                          Width="40"
+                          Height="15"
+                          Opacity="0.75"
+                          Background="DarkGray"
+                          CornerRadius="5"
+                          Padding="5,0"
+                          FontSize="10"
+                          HorizontalAlignment="Left">
+
+                    <MenuItem Header="Найти"/>
+                    <MenuItem Header="Экспорт"/>
+                </MenuItem>
+                
+
+               <MenuItem  Width="40"
+                          Height="15"
+                          Opacity="0.75"
+                          Background="DarkGray"
+                          CornerRadius="5"
+                          Padding="5, 0"
+                          FontSize="10"
+                          HorizontalAlignment="Left"
+                          Margin="5,0,0,0"
+                          Header="Вид">
+                   <MenuItem>
+                   </MenuItem>
+                </MenuItem>
+                <MenuItem  Width="40"
+                           Height="15"
+                           Opacity="0.75"
+                           Background="DarkGray"
+                           CornerRadius="5"
+                           Padding="5,0"
+                           FontSize="12"
+                           HorizontalAlignment="Left"
+                           Margin="5,0,0,0"
+                           Header="Окно">
+                </MenuItem>
+                </Menu>
+            </Grid>
+        
+            <Grid DockPanel.Dock="Bottom"
+                  Background="DimGray"
+                  Height="50"
+                  Width="500">
+                
+            </Grid>
+
+            <Grid Background="Transparent">
+                  
+			
+            </Grid>
+                
+    </DockPanel>
 </Window>
