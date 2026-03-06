@@ -72,10 +72,7 @@
                 
             </Grid>
 
-            <Grid Background="Transparent">
-                  
-			
-            </Grid>
+    
                 
     </DockPanel>
 </Window>
